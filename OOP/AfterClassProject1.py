@@ -12,5 +12,5 @@ class Dog:
 
 dog1 = Dog("Labrador Retriever", "Yellow")
 dog2 = Dog("German Shepherd", "Black and Tan")
-print(dog1)
-print(dog2)
+print(dog1.display_details())
+print(dog2.display_details())
