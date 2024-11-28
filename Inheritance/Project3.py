@@ -6,25 +6,27 @@ class Bird:
         print("A Bird")
 
     def run(self):
-        print("run faster")
+        print("Run faster")
     
     def fly(self):
         print("Fly faster")
 
 class Penguin(Bird):
     def __init__(self):
-        super().__init__()
-        print("Penguin Is Ready")
+        super().__init__() 
+        print("Penguin is ready")
 
     def whoisthis(self):
         print("A Penguin")
     
     def run(self):
-        print("Run Faster")
+        print("Penguins run faster")
 
     def fly(self):
-        print("fly faster")
+        print("Penguins can't fly, but they swim!")
 
 p1 = Penguin()
 
 p1.whoisthis()
+p1.run()
+p1.fly()
