@@ -4,6 +4,7 @@ class StringReverser:
         reversed_words = words[::-1]
         return " ".join(reversed_words)
 
+
 if __name__ == "__main__":
     reverser = StringReverser()
     sample_string = "Hello world this is Python"
