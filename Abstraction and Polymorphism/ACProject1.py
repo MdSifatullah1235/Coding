@@ -1,13 +1,20 @@
 class BMW:
     def speed(self):
-        return "BMW: 240 km/h"
+        print("BMW: 240 km/h")
+    
+    def engine(self):
+        print("Engine: M30")
 
 class Ferrari:
     def speed(self):
-        return "Ferrari: 350 km/h"
+        print("Ferrari: 350 km/h")
+    
+    def engine(self):
+        print("Engine: V12")
 
 bmw = BMW()
 ferrari = Ferrari()
 
-print(bmw.speed())     
-print(ferrari.speed()) 
+for cars in (bmw,ferrari):
+    cars.speed()
+    cars.engine()
