@@ -7,9 +7,9 @@ screen_height = 600
 display_surface = pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption("Some Images !")
 
-background_image  = pygame.transform.scale(pygame.image.load("images/Backgorund.jpg").convert(), (screen_width,screen_height))
+background_image  = pygame.transform.scale(pygame.image.load("Pygame/images/Background.jpg").convert(), (screen_width,screen_height))
 
-penguin_image = pygame.transform.scale(pygame.image.load("images/Penguin.png").convert_alpha(),(200,200))
+penguin_image = pygame.transform.scale(pygame.image.load("Pygame/images/Penguin.png").convert_alpha(),(200,200))
 
 text = pygame.font.Font(None,36).render("Penguin",True,pygame.color("black"))
 
