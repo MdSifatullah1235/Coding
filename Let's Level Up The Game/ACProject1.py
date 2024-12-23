@@ -11,11 +11,19 @@ pygame.init()
 background_image = pygame.image.load("./images/GameBG.jpg")
 Font = pygame.font.SysFont("Times New Roman",font_size) 
 
+SPRITE_COLOR_CHANGE_EVENT = pygame.USEREVENT + 1
+
+BLUE = pygame.Color("blue")
+YELLOW = pygame.Color("yellow")
+ORANGE = pygame.Color("orange")
+RED = pygame.Color("red")
+WHITE = pygame.Color("white")
+
 class Sprite(pygame.sprite.Sprite):
     def __init__(self, color,height,width):
         super().__init__()
         self.image = pygame.Surface([width,height])
-        self.image.fill(pygame.Color("blue"))
+        self.image.fill(color)
         pygame.draw.rect(self.image,color,pygame.Rect(0,0,width,height))
         self.rect = self.image.get_rect()
 
@@ -23,6 +31,8 @@ class Sprite(pygame.sprite.Sprite):
         self.rect.x = max(min(self.rect.x + x, screen_width - self.rect.width), 0 )
         self.rect.y = max(min(self.rect.y + y, screen_height - self.rect.height), 0 )
 
+    def change_color(self):
+        self.image.fill(random.choice([YELLOW, ORANGE, WHITE, RED]))
 
 Screen = pygame.display.set_mode((screen_width,screen_height))
 
@@ -46,6 +56,10 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+        elif event.type == SPRITE_COLOR_CHANGE_EVENT:
+            sp1.change_color()
+            sp2.change_color()
+
     if not win:
         keys = pygame.key.get_pressed()
         x_change = (keys[pygame.K_RIGHT] - keys[pygame.K_LEFT]) * movement_speed
@@ -56,6 +70,10 @@ while running:
         if sp1.rect.colliderect(sp2.rect):
             all_sprites.remove(sp2)
             win = True
+            pygame.event.post(pygame.event.Event(SPRITE_COLOR_CHANGE_EVENT))
+
+    sp1.change_color()
+    sp2.change_color()
 
     Screen.blit(background_image,(0,0))
     all_sprites.draw(Screen)
