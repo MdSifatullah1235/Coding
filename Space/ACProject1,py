@@ -10,7 +10,7 @@ PLAYER_STRAT_X = 370
 PLAYER_STRAT_Y = 480
 ENEMY_START_YMIN = 50
 ENEMY_START_YMAX = 150
-ENEMY_SPEED_X = 1
+ENEMY_SPEED_X = 4
 ENEMY_START_Y = 40
 BULLET_SPEED_Y = 10
 COLLISION_DISTANCE = 27
@@ -34,7 +34,7 @@ enemyX = []
 enemyY = []
 enemy_x_change = []
 enemy_y_change = []
-num_enemies = 7
+num_enemies = 6
 
 for i in range(num_enemies):
     enemyIMG.append(pygame.transform.scale(pygame.image.load("Enemy.png"), (64, 64)))
@@ -80,6 +80,9 @@ def iscollision(enemyX, enemyY, bulletY, bulletX):
     distance = math.sqrt((enemyX - bulletX) ** 2 + (enemyY - bulletY) ** 2)
     return distance < COLLISION_DISTANCE
 
+pygame.mixer.init()
+bullet_sound = "bullet.mp3"  # MP3 file for bullet
+explosion_sound = "explosion.mp3"  # MP3 file for explosion
 running = True
 
 while running:
@@ -94,6 +97,8 @@ while running:
                 player_x_change = 5
 
             if event.key == pygame.K_SPACE and bullet_state == "ready":
+                pygame.mixer.music.load(bullet_sound)
+                pygame.mixer.music.play()
                 bulletX = playerX
                 fire_bullet(bulletX, bulletY)
 
@@ -113,6 +118,8 @@ while running:
             enemyY[i] += enemy_y_change[i]
 
         if iscollision(enemyX[i], enemyY[i], bulletY, bulletX):
+            pygame.mixer.music.load(explosion_sound)
+            pygame.mixer.music.play()
             bulletY = PLAYER_STRAT_Y
             bullet_state = "ready"
             score_value += 1
