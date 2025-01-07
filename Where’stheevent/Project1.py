@@ -16,4 +16,3 @@ button.pack()
 button.bind("<Button-1>", handle_click)
 
 window.mainloop()
-
