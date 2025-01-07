@@ -1,10 +1,11 @@
 from tkinter import *
 
-window =  Tk()
+window = Tk()
 window.title("Temperature Converter")
 window.geometry("300x150")  
 
 def fahrenheitToCelsius():
+    """Convert the temperature from Fahrenheit to Celsius."""
     try:
         fahrenheit = float(entry_temperature.get())
         celsius = (5 / 9) * (fahrenheit - 32)
