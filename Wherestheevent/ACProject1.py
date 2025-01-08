@@ -8,7 +8,7 @@ def inches_to_centimeter():
     try:
         inch = float(entry_length.get())
         centimeter = inch * 2.54
-        lbl_result["text"] = f"{round(centimeter, 2)} \N{CENTIMETER}"
+        lbl_result["text"] = f"{round(centimeter, 2)} cm"
     except ValueError:
         lbl_result["text"] = "Invalid Input!"
 
@@ -25,7 +25,7 @@ btn_convert = Button(
     command=inches_to_centimeter
 )
 
-lbl_result = Label(master=window, text="\N{CENTIMETER}")
+lbl_result = Label(master=window, text="cm")
 
 frame_entry.grid(row=0, column=0, padx=10, pady=10)
 btn_convert.grid(row=1, column=0, pady=10)
