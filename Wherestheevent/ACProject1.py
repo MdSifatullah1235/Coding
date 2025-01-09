@@ -14,7 +14,7 @@ def inches_to_centimeter():
 
 frame_entry = Frame(master=window)
 entry_length = Entry(master=frame_entry, width=10)
-label_length = Label(master=frame_entry, text="Enter The Length In Inches:")
+label_length = Label(master=frame_entry, text="Enter The Length In Inches :")
 
 entry_length.grid(row=0, column=1, sticky="w")
 label_length.grid(row=0, column=0, sticky="e")
