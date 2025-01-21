@@ -33,4 +33,5 @@ class restuarantmangement:
 
         currency_dropdown.grid(row= len(self.menuitems) + 1, padx=10,pady=10,column=1)
         currency_dropdown.current(0)
+        
 
