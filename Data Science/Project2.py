@@ -15,4 +15,3 @@ print("and the two arrays : ")
 print(np.add(a,b))
 print("Multiply the two arrays : ")
 print(np.multiply(a,b))
-
