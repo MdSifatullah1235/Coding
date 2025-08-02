@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
     <div>
         <div class="border">
-            <div class="header">
+            <header class="header">
                 <h1 class="word">Welcome</h1>
-            </div>
-            <h2 class="bottom">Hi! {{name}}<br><br>
-                {{msg}}<br><br>
-                You are welcome!<br><br>
-                Happy to have you here<br><br>
-            </h2>
-            <a href="/logout" class="btn">Log out</a>
+            </header>
+            <main class="bottom">
+                <h2>Hi! {{ name | default('Guest') }}<br><br>
+                    {{ msg | default('') | safe }}<br><br>
+                    You are welcome!<br><br>
+                    Happy to have you here<br><br>
+                </h2>
+                <a href="/logout" class="btn">Log out</a>
+            </main>
         </div>
     </div>
 </body>

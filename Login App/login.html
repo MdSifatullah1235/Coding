@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="static/styles.css">
+    <link rel="stylesheet" href="filename=styles.css" type="text/css">
 </head>
 <body>
     <div>
         <div class="border">
-            <div class="header">
+            <header class="header">
                 <h1 class="word">Login</h1>
-            </div>
-            <h2 class="msg">{{msg}}</h2>
-            <form action="/login" method="POST">
-                <input id="username" name="username" type="text" placeholder="Enter your username" class="textbox"><br><br>
-                <input id="password" name="password" type="password" placeholder="Enter your password" class="textbox"><br><br>
-                <input type="submit" value="Sign in" class="btn"><br><br>
-            </form>
-            <p class="bottom">
-                Don't have account
-                <a class="bottom" href="register">Sign up here</a>
-            </p>
+            </header>
+            <main>
+                <h2 class="msg">{{ msg | default('') | safe }}</h2>
+                <form action="/login" method="POST">
+                    <div>
+                        <input id="username" name="username" type="text" placeholder="Enter your username" class="textbox" required><br><br>
+                        <input id="password" name="password" type="password" placeholder="Enter your password" class="textbox" required><br><br>
+                        <input type="submit" value="Sign in" class="btn"><br><br>
+                    </div>
+                </form>
+                <p class="bottom">
+                    Don't have an account? <a href="/register" class="bottom">Sign up here</a>
+                </p>
+            </main>
         </div>
     </div>
 </body>
