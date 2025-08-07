@@ -7,7 +7,7 @@ public class DtypesOps {
     int diff = a - b;
     int mult = a * b;
     int div = a / b;
-    int remainder = a%b;
+    int remainder = a % b;
     String magic = "      Magic      ";
 // How to use operators in 2 different methods
     System.out.println("       Method 1       ");
