@@ -14,9 +14,8 @@ public class MindRiddler {
         int increment = ++a * b++;
         System.out.println("Increment : " + increment);
         // uncomment the next lines to know the values
-        /*System.out.println("Current value of a : " + a);
+        System.out.println("Current value of a : " + a);
         System.out.println("Current value of b : " + b);
-        */
         System.out.println("Tenanary Operator ");
         int largestNumber = (a>b) ? a:b;
         System.out.println("Largest of 2 numbers : " + largestNumber);
