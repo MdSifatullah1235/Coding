@@ -9,7 +9,7 @@ public class Code {
         System.out.println("========= Leap Year Checker =========");
         int year = 2048;
         System.out.println("Year = " + year);
-        String checker = (year % 4 == 0 && (year % 100 != 0)) ? year + " is a leap year" : year + " is not a leap year";
+        String checker = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) ? year + " is a leap year" : year + " is not a leap year";
         System.out.println(checker);
     }
 }
