@@ -6,7 +6,7 @@ public class HelloUser {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your name : ");
         String name = sc.nextLine();
-        System.out.println( "Enter youre lucky number : ");
+        System.out.println( "Enter your lucky number : ");
         int number = sc.nextInt();
         System.out.println("Hello " + name + " your lucky number is " + number);
 }
