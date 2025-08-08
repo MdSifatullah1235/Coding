@@ -24,6 +24,6 @@ public class DtypesOps {
     System.out.println("(2) Remainder : " + (a % b));
     System.out.println(magic);
 // The final results
-    System.out.println("Addition : " + sum + "Difference : " + diff + "Multiplication : " + mult + "Division : " + div + "Remainder : " + remainder);
+    System.out.println("Addition : " + sum + " Difference : " + diff + " Multiplication : " + mult + " Division : " + div + " Remainder : " + remainder);
   }
 }
