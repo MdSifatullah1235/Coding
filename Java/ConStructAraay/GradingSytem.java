@@ -7,9 +7,10 @@ public class GradingSytem {
         int sum = 0;
         String result;
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of subjects : ");
         int noOfSubs = sc.nextInt();
         int marks[] = new int[noOfSubs];
-        System.out.println("Enter the marks of "+ noOfSubs + "Press enter to give marks for another subject : ");
+        System.out.println("Enter the marks of "+ noOfSubs + " subjects. Press enter to give marks for another subject : ");
         for(int i = 0; i < noOfSubs; i++) {
             marks[i] = sc.nextInt();
         
@@ -19,7 +20,7 @@ for(int j =0; j < noOfSubs; j ++) {
 }
 
 int percentage = sum / noOfSubs;
-System.out.println("Your percentage is " + percentage);
+System.out.println("Your percentage is " + percentage + "%");
 if (percentage >= 95){
     result = "Your grade is A+";
 }
