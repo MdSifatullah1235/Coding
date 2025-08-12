@@ -1,7 +1,6 @@
 package Java.ConStructAraay;
 import java.util.Scanner;
 
-import Java.ConStructAraay.*;
 public class GradingSytem {
     public static void main(String[] args) {
         int sum = 0;
