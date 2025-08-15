@@ -1,5 +1,29 @@
 package Java.OOP.Inheritance;
 
 public class Mammals {
-    
+    void mam() {
+        System.out.println("Inside Mammal Class");
+    }
+}
+
+class Lion extends Mammals {
+    void roar(){
+        System.out.println("Inside Lion CLass");
+    }
+}
+
+class Human extends Mammals{
+    void speak(){
+        System.out.println("Inside Human Class");
+    }
+}
+
+
+class Main {
+    public static void main(String[] args) {
+        Lion obj = new Lion();
+        obj.mam();
+        obj.roar();
+        obj.speak();
+    }
 }
