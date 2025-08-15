@@ -24,6 +24,9 @@ class Main {
         Lion obj = new Lion();
         obj.mam();
         obj.roar();
-        obj.speak();
+        //obj.speak(); error
+        Human obj2 = new Human();
+        obj2.mam();
+        obj2.speak();
     }
 }
