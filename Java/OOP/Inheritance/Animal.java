@@ -2,7 +2,7 @@ package Java.OOP.Inheritance;
 
 public class Animal {
     void eat(){
-        System.out.println("eating... Animal class.... eta method");
+        System.out.println("eating... Animal class.... eat method");
     }
 
 }
@@ -13,15 +13,15 @@ class Lion extends Animal {
     }
 }
 
-class babyLion extends Lion {
+class BabyLion extends Lion {
     void weep(){
-        System.out.println("weeping... babyLion class... weep method");
+        System.out.println("weeping... BabyLion class... weep method");
     }
 }
 
 class Main {
    public static void main(String[] args) {
-       babyLion obj = new babyLion();
+       BabyLion obj = new BabyLion();
        obj.eat();
        obj.roar();
        obj.weep();
