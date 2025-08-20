@@ -6,7 +6,6 @@ public class AC {
     String[] subjects = {"Bangla","English","Math","B.G.S","Science"};
     
     void Student(){
-        System.out.println("*****");
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your name : ");
         name = sc.nextLine();
@@ -35,7 +34,7 @@ public class AC {
         double average = total / 5.0;
 
         System.out.println("------------------");
-        System.out.println("Total Marks : " + total + "/500" + "Average : " + average + "%");
+        System.out.println("Total Marks : " + total + "/500" + " Average : " + average + "%");
     }
 
     public static void main(String[] args) {
