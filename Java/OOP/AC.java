@@ -15,7 +15,8 @@ public class AC {
             marks[i] = sc.nextInt();
         }
         sc.close();
-}
+    }
+
     void ReportCard(){
         System.out.println("------------------");
         System.out.println("Report Card");
@@ -27,8 +28,19 @@ public class AC {
             System.out.println(subjects[i] + " : " + marks[i]);
         }
 
-        System.out.println("------------------");
-        System.out.println("Total Marks : " + (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]) + "Average : " + (marks[0] + marks[1] + marks[2] + marks[3] + marks[4])/5);
+        int total = 0;
+        for (int i = 0; i < 5; i++) {
+            total += marks[i];
+        }
+        double average = total / 5.0;
 
+        System.out.println("------------------");
+        System.out.println("Total Marks : " + total + "/500" + "Average : " + average + "%");
+    }
+
+    public static void main(String[] args) {
+        AC student = new AC();
+        student.Student();
+        student.ReportCard();
     }
 }
