@@ -1,5 +1,4 @@
-package Java.OOP.Inheritance;
-
+package Inheritance;
 public class Mammals {
     void mam() {
         System.out.println("Inside Mammals Class");

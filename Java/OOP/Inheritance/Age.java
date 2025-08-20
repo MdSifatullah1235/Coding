@@ -1,4 +1,4 @@
-package Java.OOP.Inheritance;
+package Inheritance;
 
 public class Age {
     static class Main {
@@ -9,7 +9,7 @@ public class Age {
     }
 
     public static void main(String[] args) {
-        Main obj = new Main(24);
+        Age.Main obj = new Age.Main(24);
         System.out.println("Age : " + obj.age);
     }
 }

@@ -1,5 +1,4 @@
-package Java.OOP.Inheritance;
-
+package Inheritance;
 public class Student {
     static class Parent {
         int age, id;
