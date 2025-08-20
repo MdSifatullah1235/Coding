@@ -1,5 +1,3 @@
-package Java.OOP;
-
 public class Employee {
     int empno;
     String name;

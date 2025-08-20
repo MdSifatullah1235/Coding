@@ -1,5 +1,3 @@
-package Java.OOP;
-
 public class Counter {
     int number = 10;
     void increment()  {

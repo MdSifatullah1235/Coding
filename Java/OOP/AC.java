@@ -5,24 +5,30 @@ public class AC {
     int[] marks = new int[5];
     String[] subjects = {"Bangla","English","Math","B.G.S","Science"};
     
-    Student(){
+    void Student(){
         System.out.println("*****");
-        empno = 101;
-        name = "Asish";
-        salary = 10000f;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your name : ");
+        name = sc.nextLine();
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Enter marks of " + subjects[i] + " : ");
+            marks[i] = sc.nextInt();
+        }
+        sc.close();
 }
-    void displaydetails(){
-        System.out.println(empno+ " | " + name + " | " + salary);
-    }
-class Main {
-    public static void main(String[] args) {
-        Employee emp1 = new Employee();
-        Employee emp2 = new Employee();
-        Employee emp3 = new Employee();
+    void ReportCard(){
+        System.out.println("------------------");
+        System.out.println("Report Card");
+        System.out.println("Name : " + name);
+        System.out.println("------------------");
+        System.out.println("Subject      Marks");
+        System.out.println("------------------");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(subjects[i] + " : " + marks[i]);
+        }
 
-        emp1.displaydetails();
-        emp2.displaydetails();
-        emp3.displaydetails();
-}
-}
+        System.out.println("------------------");
+        System.out.println("Total Marks : " + (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]) + "Average : " + (marks[0] + marks[1] + marks[2] + marks[3] + marks[4])/5);
+
+    }
 }
