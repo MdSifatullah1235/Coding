@@ -2,7 +2,7 @@ package Java.OOP.Inheritance;
 
 public class Mammals {
     void mam() {
-        System.out.println("Inside Mammal Class");
+        System.out.println("Inside Mammals Class");
     }
 }
 
