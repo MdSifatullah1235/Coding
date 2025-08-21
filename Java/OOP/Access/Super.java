@@ -1,6 +1,6 @@
 package Access;
 
-public class Super1 {
+public class Super {
     public static void main(String[] args) {
         subclass obj = new subclass();
         obj.display();
