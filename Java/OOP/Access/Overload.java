@@ -4,7 +4,7 @@ public class Overload {
     public static void main(String[] args) {
         Student s1 = new Student();
         Student s2 = new Student(30, "Sifat");
-        Student s3 = new Student(30, "Sifat", 1000);
+        Student s3 = new Student(10, "Musfiq", 1000);
 
         s1.displayDetails();
         s2.displayDetails();
