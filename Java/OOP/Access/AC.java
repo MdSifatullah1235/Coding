@@ -1,7 +1,6 @@
 package Access;
 
 import java.util.*;
-
 public class AC {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -14,9 +13,9 @@ public class AC {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-
+        System.out.println("Original array: " + Arrays.toString(arr));
         Arrays.sort(arr);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
 
-        System.out.println("Sorted: " + Arrays.toString(arr));
     }
 }
