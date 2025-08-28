@@ -8,6 +8,7 @@ public class Objects {
        obj.show_shape();
        obj = new Prism();
        obj.show_shape(); 
+       obj.shape();
     }
 }
 
