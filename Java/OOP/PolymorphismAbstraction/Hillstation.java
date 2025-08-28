@@ -22,11 +22,11 @@ public class Hillstation {
 
 class HillStations {
     void location() {
-        System.out.println("location : ");
+        System.out.println("location");
     }
 
     void famousfor(){
-        System.out.println("famous for : ");
+        System.out.println("famous for");
     }
 }
 
