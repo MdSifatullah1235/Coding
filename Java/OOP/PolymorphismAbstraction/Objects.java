@@ -2,7 +2,12 @@ package PolymorphismAbstraction;
 
 public class Objects {
     public static void main(String[] args) {
-        
+       Object_s obj = new Sphere();
+       obj.show_shape();
+       obj = new Cuboid();
+       obj.show_shape();
+       obj = new Prism();
+       obj.show_shape(); 
     }
 }
 
