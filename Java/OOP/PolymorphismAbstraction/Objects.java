@@ -9,6 +9,7 @@ public class Objects {
        obj = new Prism();
        obj.show_shape(); 
        obj.shape();
+       obj.show_shape();
     }
 }
 
