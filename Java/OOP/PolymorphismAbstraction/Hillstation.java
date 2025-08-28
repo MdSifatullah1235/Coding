@@ -68,8 +68,6 @@ class ZowTlang extends HillStations {
     }
 
     void famousfor(){
-        System.out.println("is famous for being one of the country's highest and wildest mountain peaks, offering a difficult challenge to trekkers and adventurers");
+        System.out.println("being one of the country's highest and wildest mountain peaks, offering a difficult challenge to trekkers and adventurers");
     }
 }
-
-
