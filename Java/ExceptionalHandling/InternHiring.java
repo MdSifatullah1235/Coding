@@ -13,7 +13,7 @@ public class InternHiring {
         System.out.println("Enter percentage in 10th");
         int percentage = sc.nextInt();
         if (percentage < 50) {
-            throw new InvalidInternException("Percentage should be greater than 50%");
+            throw new InvalidInternException("Registration Unsuccessful");
         } else {
             Candidate candidate = new Candidate();
             candidate.setName(name);
