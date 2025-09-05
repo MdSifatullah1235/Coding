@@ -1,4 +1,4 @@
-package Java.LeapYearChecker;
+package LeapYearChecker;
 /* Just a program to check 
 if a year assigned to the "year" variable
 is a leap year or not

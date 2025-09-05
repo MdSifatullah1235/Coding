@@ -1,4 +1,4 @@
-package Java.DtypesOps;
+package DtypesOps;
 
 public class Maggie {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Java.DtypesOps;
+package DtypesOps;
 public class DtypesOps {
     public static void main(String[] args) {
     int a = 10;

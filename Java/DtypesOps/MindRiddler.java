@@ -1,4 +1,4 @@
-package Java.DtypesOps;
+package DtypesOps;
 
 public class MindRiddler {
     public static void main(String[] args) {
