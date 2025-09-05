@@ -35,7 +35,7 @@ public class InternHiring {
     }
 
     public static class Candidate {
-        private String name;
+        private String name;kabb
         private String gender;
         private int percentage;
 
