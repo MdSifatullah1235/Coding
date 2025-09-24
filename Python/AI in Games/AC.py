@@ -2,7 +2,7 @@ import random
 from colorama import Fore, init, Style
 init(autoreset=True)
 
-def display_ground(ground):
+def display_ground():
     print()
 
     print(Fore.GREEN + f"             Player                 ")
@@ -13,3 +13,6 @@ def display_ground(ground):
     print(Fore.CYAN + f"           AI chose              ")
     print("")
     print("-------------------------------")
+
+
+display_ground()
