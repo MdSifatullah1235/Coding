@@ -21,12 +21,19 @@ weather_report =[
     "sunny","cloudy","rainy","snowy"
 ]
 
+updated_news = [
+    "The government has decided to increase the prices of soybean and palm oil following proposals from traders. However, the precise margin of the increase has not yet been determined."
+    "Tasnim Jara, Senior Joint Member-Secretary of the National Citizen Party (NCP), remarked that the incident of eggs being thrown at Akhter Hossain, Member-Secretary of the NCP in New York, was not merely an attack on him personally. She said that the attack had taken place because of Akhter’s political identity."
+]
 #Helper funtion used for removing spaces,lowercasing the input from user
 def normalize_text(text):
     return re.sub(r"\s+"," ",text.strip().lower())
 
 def check_weather():
     print(Fore.GREEN+ f"The weather is very : {random.choice(weather_report)} ")
+
+def new_update():
+    print(Fore.GREEN + f"{random.choice(updated_news)}")
 def recommend():
     print(Fore.CYAN + "Beaches, mountains or cities ?")
     preference = input(Fore.YELLOW + "You: ")
@@ -100,7 +107,10 @@ def chat():
         
         elif "weather" in user_input or "forecast" in user_input:
             check_weather()
-        
+
+        elif "news" in user_input or "update" in user_input:
+            new_update()
+
         elif "exit" in user_input or "bye" in user_input:
             print(Fore.CYAN + "Safe Travels bye!")
             break
