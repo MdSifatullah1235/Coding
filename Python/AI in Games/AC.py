@@ -8,7 +8,7 @@ def display_ground():
     print(Fore.GREEN + f"              Player               ")
     print(Fore.CYAN + f"           Player chose              ")
     print("")
-    print("-------------------------------")
+    print(Fore.YELLOW + "-------------------------------")
     print(Fore.RED + f"              AI                 ")
     print(Fore.CYAN + f"           AI chose              ")
     print("")
