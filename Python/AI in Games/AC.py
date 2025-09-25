@@ -2,16 +2,21 @@ import random
 from colorama import Fore, init, Style
 init(autoreset=True)
 
-def display_ground():
+def display_board(board):
+    print()
+    def colored(cell):
+        if cell == "X":
+            return Fore.RED + cell + Style.RESET_ALL
+        elif cell == "O":
+            return Fore.BLUE + cell + Style.RESET_ALL
+        else:
+            return Fore.YELLOW + cell + Style.RESET_ALL
+    
+    print(" " + colored(board[0]) + " | " + colored(board[1]) + " | " + colored(board[2]))
+    print(Fore.CYAN + "-----------")
+    print(" " + colored(board[3]) + " | " + colored(board[4]) + " | " + colored(board[5]))
+    print(Fore.CYAN + "-----------")
+    print(" " + colored(board[6]) + " | " + colored(board[7]) + " | " + colored(board[8]))
     print()
 
-    print(Fore.GREEN + f"              Player               ")
-    print(Fore.CYAN + f"           Player chose              ")
-    print("")
-    print(Fore.YELLOW + "-------------------------------")
-    print(Fore.RED + f"              AI                 ")
-    print(Fore.CYAN + f"           AI chose              ")
-    print("")
-
-
-display_ground()
+display_board(["1","2","3","4","5","6","7","8","9"])
