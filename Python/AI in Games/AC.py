@@ -102,7 +102,7 @@ def ai_move(player_choice):
 
 # Main game loop
 while True:
-    player_choice = input("\nEnter your move (rock, paper, scissors): ").lower()
+    player_choice = input(Fore.CYAN + "\nEnter your move (rock, paper, scissors): ").lower()
 
     if player_choice not in ["rock", "paper", "scissors"]:
         print(Fore.YELLOW + "Invalid choice. Try again.")
