@@ -1,10 +1,10 @@
 import cv2
 
 #Load the image 
-img = cv2.imread('1.jpg')
+img = cv2.imread('Example.png')
 
 #Convert to image to grayscale
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 #Resize the img to 224x224
 resized_img = cv2.resize(gray, (224, 224))
@@ -25,3 +25,6 @@ else:
 
 #Close the window
 cv2.destroyAllWindows()
+
+#Print the processed image shape
+print(f"Processed image Dimensions: {resized_img.shape}")
