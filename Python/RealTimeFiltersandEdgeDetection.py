@@ -24,6 +24,16 @@ def apply_filters(img,filter_type):
         combined_sobel = cv2.bitwise_or(sobelx.astype(np.uint8), sobely.astype(np.uint8))
         filtered_img = cv2.cvtColor(combined_sobel, cv2.COLOR_GRAY2BGR)
     
+    elif filter_type == "black":
+        filtered_img[:,:,0] = 0
+        filtered_img[:,:,1] = 0
+        filtered_img[:,:,2] = 0
+    
+    elif filter_type == "white":
+        filtered_img[:,:,0] = 255
+        filtered_img[:,:,1] = 255
+        filtered_img[:,:,2] = 255
+    
     elif filter_type == 'canny':
         gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         edges = cv2.Canny(gray_img, 100, 200)
@@ -66,6 +76,10 @@ else:
             filter_type = "sobel"
         elif key == ord("c"):
             filter_type = "canny"
+        elif key == ord("w"):
+            filter_type = "white"
+        elif key == ord("l"):
+            filter_type = "black"
         elif key == ord("q"):
             print("Exiting the program...")
             break
